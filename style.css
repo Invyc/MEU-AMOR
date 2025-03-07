@@ -23,6 +23,8 @@ h1 {
 
 p {
     font-size: 1.2em;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 /* Player do Spotify */
@@ -32,19 +34,19 @@ p {
     max-width: 400px;
 }
 
-/* Imagens posicionadas */
+/* IMAGENS - TAMANHO PEQUENO E NO LUGAR CERTO */
 .imagem-topo-esquerda {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 100px;
+    width: 80px; /* Reduz o tamanho */
     height: auto;
 }
 
 .imagem-centro {
     display: block;
     margin: 20px auto;
-    width: 150px;
+    width: 100px; /* Reduz o tamanho */
     height: auto;
 }
 
@@ -52,14 +54,14 @@ p {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    width: 100px;
+    width: 80px; /* Reduz o tamanho */
     height: auto;
 }
 
 .brasao-lufa-lufa {
     display: block;
     margin: 10px auto;
-    width: 120px;
+    width: 100px; /* Reduz o tamanho */
     height: auto;
 }
 
