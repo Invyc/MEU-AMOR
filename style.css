@@ -1,64 +1,95 @@
+/* Estilização geral */
 body {
-        background-color: #ffeb3b; /* Cor da Lufa-Lufa */
-            text-align: center;
-                font-family: 'Arial', sans-serif;
-                    color: #4e342e;
-                        overflow: hidden;
-                            position: relative; /* Para garantir que os corações fiquem sobre o conteúdo */
-                            }
+    background-color: #ffeb3b; /* Cor da Lufa-Lufa */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #4e342e;
+    overflow: hidden;
+    position: relative; /* Para garantir que os corações fiquem sobre o conteúdo */
+}
 
-                            .container {
-                                margin-top: 50px;
-                                    position: relative;
-                                        z-index: 1; /* Garantir que o conteúdo fique abaixo dos corações */
-                                        }
+/* Container principal */
+.container {
+    margin-top: 50px;
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo fique abaixo dos corações */
+}
 
-                                        h1 {
-                                            font-size: 2em;
-                                                color: #3e2723;
-                                                }
+/* Títulos e textos */
+h1 {
+    font-size: 2em;
+    color: #3e2723;
+}
 
-                                                p {
-                                                    font-size: 1.2em;
-                                                    }
+p {
+    font-size: 1.2em;
+}
 
-                                                    .spotify-player {
-                                                        margin: 20px auto;
-                                                            width: 80%;
-                                                                max-width: 400px;
-                                                                }
+/* Player do Spotify */
+.spotify-player {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+}
 
-                                                                .hufflepuff {
-                                                                    width: 200px;
-                                                                        margin-top: 20px;
-                                                                        }
+/* Imagens posicionadas */
+.imagem-topo-esquerda {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+}
 
-                                                                        .hearts {
-                                                                            position: absolute;
-                                                                                width: 100%;
-                                                                                    height: 100%;
-                                                                                        pointer-events: none;
-                                                                                            top: 0;
-                                                                                                left: 0;
-                                                                                                    z-index: 10; /* Garantir que os corações fiquem sobre tudo */
-                                                                                                    }
+.imagem-centro {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    height: auto;
+}
 
-                                                                                                    .heart {
-                                                                                                        position: absolute;
-                                                                                                            color: red;
-                                                                                                                font-size: 20px;
-                                                                                                                    animation: floatUp 5s linear infinite;
-                                                                                                                        z-index: 20; /* Garantir que cada coração flutue sobre os outros */
-                                                                                                                        }
+.imagem-inferior-esquerda {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+}
 
-                                                                                                                        /* Animação dos corações de baixo para cima */
-                                                                                                                        @keyframes floatUp {
-                                                                                                                            0% {
-                                                                                                                                    transform: translateY(100vh); /* Começa na parte inferior da tela */
-                                                                                                                                            opacity: 1;
-                                                                                                                                                }
-                                                                                                                                                    100% {
-                                                                                                                                                            transform: translateY(-100vh); /* Vai até o topo da tela */
-                                                                                                                                                                    opacity: 0;
-                                                                                                                                                                        }
-                                                                                                                                                                        }
+.brasao-lufa-lufa {
+    display: block;
+    margin: 10px auto;
+    width: 120px;
+    height: auto;
+}
+
+/* Corações animados */
+.hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: floatUp 5s linear infinite;
+    z-index: 20;
+}
+
+/* Animação dos corações */
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
