@@ -5,14 +5,14 @@ body {
     font-family: 'Arial', sans-serif;
     color: #4e342e;
     overflow: hidden;
-    position: relative; /* Para garantir que os corações fiquem sobre o conteúdo */
+    position: relative;
 }
 
 /* Container principal */
 .container {
     margin-top: 50px;
     position: relative;
-    z-index: 1; /* Garante que o conteúdo fique abaixo dos corações */
+    z-index: 1;
 }
 
 /* Títulos e textos */
@@ -34,64 +34,45 @@ p {
     max-width: 400px;
 }
 
-/* IMAGENS - TAMANHO PEQUENO E NO LUGAR CERTO */
-.imagem-topo-esquerda {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 80px; /* Reduz o tamanho */
-    height: auto;
-}
-
+/* IMAGEM DO CENTRO - MAIS LARGA */
 .imagem-centro {
     display: block;
     margin: 20px auto;
-    width: 100px; /* Reduz o tamanho */
+    width: 80%; /* Faz a imagem ocupar 80% da largura da tela */
+    max-width: 400px; /* Limite de largura para não ficar exagerado */
     height: auto;
 }
 
-.imagem-inferior-esquerda {
+/* IMAGENS ANIMADAS (subindo e descendo) */
+.imagem-animada {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-    width: 80px; /* Reduz o tamanho */
+    width: 80px; /* Tamanho reduzido */
     height: auto;
 }
 
-.brasao-lufa-lufa {
-    display: block;
-    margin: 10px auto;
-    width: 100px; /* Reduz o tamanho */
-    height: auto;
-}
-
-/* Corações animados */
-.hearts {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    top: 0;
-    left: 0;
-    z-index: 10;
-}
-
-.heart {
-    position: absolute;
-    color: red;
-    font-size: 20px;
-    animation: floatUp 5s linear infinite;
-    z-index: 20;
-}
-
-/* Animação dos corações */
-@keyframes floatUp {
+/* Animação de subida e descida */
+@keyframes subirDescer {
     0% {
-        transform: translateY(100vh);
-        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100px); /* Sobe */
     }
     100% {
-        transform: translateY(-100vh);
-        opacity: 0;
+        transform: translateY(0); /* Volta para a posição original */
     }
+}
+
+/* Imagem no canto esquerdo subindo e descendo */
+.imagem-esquerda {
+    left: 10px;
+    bottom: 100px;
+    animation: subirDescer 4s ease-in-out infinite;
+}
+
+/* Imagem no canto direito descendo e subindo */
+.imagem-direita {
+    right: 10px;
+    top: 100px;
+    animation: subirDescer 4s ease-in-out infinite reverse;
 }
