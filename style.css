@@ -34,8 +34,8 @@ p {
 .imagem-centro {
     display: block;
     margin: 20px auto;
-    width: 90%; /* Aumenta a largura para ocupar quase toda a tela */
-    max-width: 500px; /* Define um limite máximo para não ficar exagerado */
+    width: 50%; /* Aumenta a largura para ocupar quase toda a tela */
+    max-width: 350px; /* Define um limite máximo para não ficar exagerado */
     height: auto; /* Mantém a proporção correta */
     border-radius: 10px; /* Deixa as bordas arredondadas (opcional) */
 }
