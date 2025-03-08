@@ -40,7 +40,7 @@ p {
     margin: 10px auto;
     width: 80%; /* Faz a imagem ocupar 80% da largura da tela */
     max-width: 400px; /* Limite de largura para não ficar exagerado */
-    height: auto;
+    height: 300px;
 }
 
 /* IMAGENS ANIMADAS (subindo e descendo) */
